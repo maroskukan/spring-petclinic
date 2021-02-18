@@ -1,3 +1,5 @@
+#!/usr/bin/env groovy
+
 //Declarative //
 pipeline {
     agent any
@@ -14,6 +16,7 @@ pipeline {
                 //sh 'false' // true
             }
         }
+    }
     post {
         always {
             junit '**/target/surefire-reports/TEST-*.xml'
